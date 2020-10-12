@@ -21,7 +21,7 @@ class Plugin(api.Plugin,
 
     def configure(self, options):
         self.is_active_assert = options.__dict__['std.code.assert']
-        self.pattern_to_search = re.compile(r'\n[^\S\t]*assert[^\S\t]*\(')
+        self.pattern_to_search = re.compile(r'\n[^\S\t]*assert[^\S\t]*\(|;[^\S\t]*assert[^\S\t]*\(')
 
     def initialize(self):
         self.declare_metric(self.is_active_assert,
