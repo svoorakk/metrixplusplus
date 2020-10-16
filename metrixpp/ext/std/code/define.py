@@ -1,9 +1,9 @@
 #
-#    Metrix++, Copyright 2009-2019, Metrix++ Project
-#    Link: https://github.com/metrixplusplus/metrixplusplus
-#    
+#    Metrix++, Copyright 2020, Sridhar Voorakkara
+#    Link: https://github.com/svoorakk/metrixplusplus
+#
 #    This file is a part of Metrix++ Tool.
-#    
+#
 
 from metrixpp.mpp import api
 import re
