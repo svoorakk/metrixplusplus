@@ -146,8 +146,12 @@ class DirectoryReader():
                             text = f.read();
                         except:
                             f = open(full_path, 'rU', encoding='windows-1252');
-                            text = f.read()
-                            text = bytes(text,  'utf-8');
+                            try:
+                                text = f.read()
+                                text = bytes(text,  'utf-8');
+                            except:
+                                # Ignoring if not utf-8 or windows encoding
+                                text = b''
                         # getting along with the different string handling of python 2 and 3
                         # trying to get along with different encodings to get the tests running
                         # on windows and linux

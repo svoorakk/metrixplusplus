@@ -36,8 +36,8 @@ class Plugin(api.Plugin,
         self.pattern_to_search = re.compile(
             r'^/[/|*].*copyright.*({0}).*$'.
             format('|'.join(self.cr_tags_list)), flags = re.IGNORECASE | re.MULTILINE)
-        print(self.pattern_to_search)
-        print(r'^/[/|*].*copyright.*({0}).*$'.format('|'.join(self.cr_tags_list)))
+        # print(self.pattern_to_search)
+        # print(r'^/[/|*].*copyright.*({0}).*$'.format('|'.join(self.cr_tags_list)))
     def initialize(self):
         self.declare_metric(self.is_active_copyright,
                             self.Field('copyright', int, non_zero=True),
